@@ -1,0 +1,41 @@
+<header class="header">
+  <a href="home.html" class="logo"> <i class="fas fa-lightbulb"></i> furni</a>
+
+  <form action="" class="search-form">
+    <input type="search" placeholder="buscar aqui..." id="search-box" />
+    <label for="search-box" class="fas fa-search"></label>
+  </form>
+
+  <div class="icons">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <div id="search-btn" class="fas fa-search"></div>
+    <div id="cart-btn" class="fas fa-shopping-cart"></div>
+    <div id="login-btn" class="fas fa-user"></div>
+  </div>
+</header>
+
+<div id="closer" class="fas fa-times"></div>
+<!-- <button id="button">Click Me</button> -->
+<nav class="navbar">
+  <a href="home.html">inicio</a>
+  <a href="shop.html">tienda</a>
+  <a href="about.html">nosotros</a>
+  <a href="team.html">equipo</a>
+  <a href="blog.html">blog</a>
+  <a href="contact.html">contacto</a>
+</nav>
+
+<script>
+  let closer = document.getElementById("closer")!
+  let navbar = document.querySelector('.navbar')!
+  function handleClick() {
+    closer.style.display = 'none';
+    navbar.classList.remove('active');
+  }
+  function handleClickMenu() {
+    closer.style.display = 'block';
+    navbar.classList.toggle('active');
+  }
+  document.getElementById("closer")?.addEventListener("click", handleClick);
+  document.getElementById("menu-btn")?.addEventListener("click", handleClickMenu);
+</script>

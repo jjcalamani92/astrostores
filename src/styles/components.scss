@@ -1,0 +1,107 @@
+.header {
+  padding: 2rem 9%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgb(var(--light-primary-color));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    font-size: 2.5rem;
+    color: rgb(var(--primary-color));
+    font-weight: bolder;
+    i {
+      padding-right: 0.3rem;
+    }
+  }
+
+  .search-form {
+    height: 5rem;
+    width: 50rem;
+    border-radius: 5rem;
+    background: rgb(var(--fill-color));
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid rgb(var(--primary-color));
+    input {
+      height: 100%;
+      width: 100%;
+      padding: 0 1.2rem;
+      font-size: 1.6rem;
+      color: rgb(var(--primary-color));
+      text-transform: none;
+    }
+    label {
+      font-size: 2.2rem;
+      padding-right: 1.7rem;
+      cursor: pointer;
+      color: rgb(var(--primary-color));
+
+      &:hover {
+        color: rgb(var(--accent-color));
+      }
+    }
+  }
+  .icons div {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(var(--primary-color));
+    &:hover {
+      color: rgb(var(--accent-color));
+    }
+  }
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+#closer{
+  position: fixed;
+  top:1.5rem; right:2rem;
+  z-index: 110;
+  font-size: 5rem;
+  cursor: pointer;
+  color: rgb(var(--primary-color));
+    &:hover {
+      color: rgb(var(--accent-color));
+    }
+  animation: rotate .4s linear .4s backwards;
+  display: none;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  right:-101%;
+  z-index: 100;
+  background: rgb(var(--fill-color));
+  width: 35rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  &.active{
+    right:0;
+    box-shadow: 0 0 0 100vw rgba(0,0,0,.5);
+    transition: .4s linear;
+  }
+  // box-shadow: 0 0 0 100vw rgba(0,0,0,.5);
+  a{
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    color: rgb(var(--primary-text));
+    &:hover {
+      color: rgb(var(--secondary-text));
+    }
+  }
+}

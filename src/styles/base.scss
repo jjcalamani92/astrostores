@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+:root,
+html[class="red"] {
+  --dark-primary-color: 185, 28, 28;
+  --light-primary-color: 254, 226, 226;
+  --primary-color: 220, 38, 38;
+  --fill-color: 255, 255, 255;
+  --accent-color: 239, 68, 68;
+  --primary-text: 33, 33, 33;
+  --secondary-text: 117, 117, 117;
+  --card-color: 230, 230, 230;
+  --card-muted-color: 205, 205, 205;
+  --divider-color: 189, 189, 189;
+}
+html[class="darkRed"] {
+  --dark-primary-color: 185, 28, 28;
+  --light-primary-color: 153, 27, 27;
+  --primary-color: 220, 38, 38;
+  --fill-color: 33, 39, 55;
+  --accent-color: 239, 68, 68;
+  --primary-text: 234, 237, 243;
+  --secondary-text: 245, 248, 255;
+  --card-color: 230, 230, 230;
+  --card-muted-color: 205, 205, 205;
+  --divider-color: 189, 189, 189;
+}
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  
+
+  &::-webkit-scrollbar{
+    width:1rem;
+  }
+
+  &::-webkit-scrollbar-track{
+    background: rgb(var(--fill-color));
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background: rgb(var(--accent-color));
+  }
+}
+body {
+  @apply min-h-screen bg-cris-fill text-cris-base 
+  selection:bg-cris-accent selection:bg-opacity-70 selection:text-cris-inverted;
+}
+
+
